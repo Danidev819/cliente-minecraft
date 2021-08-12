@@ -8,6 +8,7 @@ import java.util.function.Predicate;
 
 import org.lwjgl.input.Keyboard;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 
@@ -58,6 +59,8 @@ public class HUDConfigScreen extends GuiScreen {
 			this.drawHollowRect(pos.getAbsoluteX(), pos.getAbsoluteY(), renderer.getWidth(),renderer.getHeight(), 0xFF00FFFF);
 			
 		}
+		
+		this.zLevel = zBackup;
 	}
 
 	private void drawHollowRect(int x, int y, int w, int h, int color) {
@@ -112,7 +115,7 @@ public class HUDConfigScreen extends GuiScreen {
 	
 	private void adjustBounds(IRenderer renderer, ScreenPosition pos) {
 		
-		ScaledResolution res = new ScaledResolution(mc);
+		ScaledResolution res = new ScaledResolution(Minecraft.getMinecraft());
 		
 		int screenWidth = res.getScaledWidth();
 		int screenHeight = res.getScaledHeight();
@@ -137,7 +140,7 @@ public class HUDConfigScreen extends GuiScreen {
 	
 	private class MouseOverFinder implements Predicate<IRenderer> {
 		
-		private int mouseX, mouseY
+		private int mouseX, mouseY;
 		
 		public MouseOverFinder(int x, int y) {
 			this.mouseX = x;
@@ -156,7 +159,7 @@ public class HUDConfigScreen extends GuiScreen {
 				
 				if(mouseY >= absoluteY && mouseY <= absoluteY + renderer.getHeight()) {
 					
-					return ture;
+					return true;
 					
 				}
 				
