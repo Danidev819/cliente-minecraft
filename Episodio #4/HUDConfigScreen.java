@@ -12,7 +12,10 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 
-//xd
+/*Codigo hecho por Danipro_2007
+ *  12/07/2021
+ * Creditos pa mi pa, me costo mucho :'v
+ */
 
 public class HUDConfigScreen extends GuiScreen {
 
