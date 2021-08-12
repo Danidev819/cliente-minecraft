@@ -13,7 +13,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 
 /*Codigo hecho por Danipro_2007
- *  12/07/2021
+ *  12/08/2021
  * Creditos pa mi pa, me costo mucho :'v
  */
 
