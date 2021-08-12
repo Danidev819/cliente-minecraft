@@ -12,6 +12,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 
+//xd
+
 public class HUDConfigScreen extends GuiScreen {
 
 	private final HashMap<IRenderer, ScreenPosition> renderers = new HashMap<IRenderer, ScreenPosition>();
@@ -48,7 +50,7 @@ public class HUDConfigScreen extends GuiScreen {
 		final float zBackup = this.zLevel;
 		this.zLevel = 200;
 		
-		this.drawHollowRect(0, 0, this.width - 1, this.height - 1, 0xFFFF0000);
+		this.drawHollowRect(0, 0, this.width - 1, this.height - 1, 0xFFFF0000);//Rojo Rodea el menu
 		
 		for(IRenderer renderer : renderers.keySet()) {
 			
@@ -56,7 +58,7 @@ public class HUDConfigScreen extends GuiScreen {
 			
 			renderer.renderDummy(pos);
 			
-			this.drawHollowRect(pos.getAbsoluteX(), pos.getAbsoluteY(), renderer.getWidth(),renderer.getHeight(), 0xFF00FFFF);
+			this.drawHollowRect(pos.getAbsoluteX(), pos.getAbsoluteY(), renderer.getWidth(),renderer.getHeight(), 0xFF00FFFF);//Azul rodea las letras del menu
 			
 		}
 		
